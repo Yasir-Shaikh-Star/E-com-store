@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.page1 {
+  min-height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(at 0% 0%, hsla(28, 100%, 93%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(0, 0%, 94%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(22, 100%, 95%, 1) 0, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(0, 0%, 100%, 1) 0, transparent 50%);
+  background-attachment: fixed;
+}
+
+.page2 {
+  min-height: 100%;
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(at 0% 0%, hsla(28, 100%, 93%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(0, 0%, 94%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(22, 100%, 95%, 1) 0, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(0, 0%, 100%, 1) 0, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* .page3 {
+  height: 70%;
+  width: 100%;
+  
+} */
+
+.page3 {
+    height: 60vh; /* 60% of screen height */
+    background-color: #0d0d0d;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.heading {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 150%;
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+}
+
+nav a {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #f1690e;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #f1690e;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  gap: 25px;
+}
+
+.icons img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.icons img:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.container {
+  display: flex;
+  padding: 60px 40px;
+  align-items: center;
+}
+
+.left {
+  flex: 1;
+  padding-right: 50px;
+  text-align: left;
+  text-transform: capitalize;
+  font-family: "Inter", sans-serif;
+}
+
+.left h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+.left h1:hover {
+  color: #f1690e;
+  transform: translateX(10px);
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.right img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: flex-start;
+  padding: 40px 0;
+}
+
+.button button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 18px 45px;
+  border-radius: 50px;
+  border: 2px solid #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button button:hover {
+  background-color: #333333;
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  letter-spacing: 3px;
+}
+
+.header {
+  text-align: center;
+  padding: 60px 10px 20px 10px;
+}
+
+.header h1 {
+  font-family: "Inter", sans-serif;
+  letter-spacing: 8px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
+.inventory {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 15px;
+}
+
+.product-card {
+  width: calc(14.28% - 15px);
+  min-width: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  background-color: #ffffff;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  object-fit: contain;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.product-card:hover img {
+  transform: scale(1.15);
+}
+
+.product-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-price {
+  font-size: 16px;
+  color: #f1690e;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.product-desc {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.add-cart {
+  background-color: #f1690e;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.add-cart:hover {
+  background-color: #000000;
+}
+
+footer {
+    padding: 10px 10px;
+    align-content: center;
+}
+
+.container{
+  justify-content: space-around;
+}
+.signup h3{
+  padding-bottom: 10px;
+  font-size: x-large;
+
+}
+
+.signup form{
+  padding-top: 10px;
+  
+}
+.signup form input{
+    width: 70%;
+    padding: 8px 10px;
+    border: 1px solid white;
+    background: white;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    border-radius: 8px;
+}
+.about h3{
+  padding-bottom: 10px;
+  font-size: x-large;
+
+}
+
+.about p{
+  padding-top: 8px;
+}
+
+.assistance h3{
+  padding-bottom: 10px;
+  font-size: x-large;
+}
+
+.assistance p{
+  padding-top: 8px;
+}
+
+.bottom-bar{
+  align-items: center;
+  color: white;
+}
+.social{
+  text-align: center;
+}
+.payment{
+  text-align: center;
+}
+
+@media screen and (max-width:500px) {
+
+.container .left{
+  text-align: center;
+}
+.button button{
+  text-align: center;
+  width: 100%;
+}
+
+  .navbar{flex-direction: column;
+  
+  }
+  .navbar a{
+    font-size: 0.8rem;
+    padding-bottom: 3px;
+  }
+
+  .container{
+    flex-direction: column;
+    text-align: center;
+  }
+}
