@@ -41,8 +41,9 @@ body {
 } */
 
 .page3 {
-    height: 60vh; /* 60% of screen height */
-    background-color: #0d0d0d;
+  
+    height: 40vh; 
+    background-color: rgb(66, 65, 65);
     color: #fff;
     font-family: Arial, sans-serif;
 }
@@ -295,11 +296,15 @@ nav a:hover::after {
 footer {
     padding: 10px 10px;
     align-content: center;
+    
 }
 
 .container{
   justify-content: space-around;
+  
 }
+
+
 .signup h3{
   padding-bottom: 10px;
   font-size: x-large;
@@ -343,12 +348,6 @@ footer {
   align-items: center;
   color: white;
 }
-.social{
-  text-align: center;
-}
-.payment{
-  text-align: center;
-}
 
 @media screen and (max-width:500px) {
 
@@ -371,5 +370,28 @@ footer {
   .container{
     flex-direction: column;
     text-align: center;
+    align-content: center;
+    margin-bottom: 5px;
   }
+  .signup form{
+    margin: 10px;
+  }
+  .about{
+    margin: 10px;
+  }
+
+.page3 {
+  
+    height: 60%; 
+    background-color: rgb(66, 65, 65);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    
+  
+    
+}
+footer{
+  padding: 0px;
+
+}
 }
